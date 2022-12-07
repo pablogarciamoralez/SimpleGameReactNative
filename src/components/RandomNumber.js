@@ -10,7 +10,10 @@ export default class RandomNumber extends React.Component {
     onPress: PropTypes.func.isRequired,
   };
   handlePress = () => {
-    console.log(this.props.number);
+    // console.log(this.props.number);
+    if (this.props.isDisabled) {
+      return;
+    }
     this.props.onPress(this.props.id);
   };
   render() {
